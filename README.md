@@ -17,7 +17,6 @@ All modules are designed to be **modular, reusable, and synthesizable**, making 
 | multiper       | Multiplier module for combinational/sequential multiplication |
 | reg_32         | 32-bit register with enable and reset |
 | shift_reg      | Shift register (serial-in/serial-out, parallel load) |
-| UART Full-Duplex | UART module supporting simultaneous transmission & reception |
 
 ---
 
