@@ -1,0 +1,22 @@
+$date
+	Mon Jan  5 15:18:27 2026
+$end
+$version
+	Questa Intel Starter FPGA Edition Version 2024.3
+$end
+$timescale
+	1ns
+$end
+
+$scope module tb_top $end
+$upscope $end
+
+$scope begin tb_top_sv_unit $end
+$upscope $end
+
+$scope begin std $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+$end

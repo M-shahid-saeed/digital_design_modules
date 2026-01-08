@@ -1,0 +1,18 @@
+`ifndef TRANSACTION_SV
+`define TRANSACTION_SV
+
+class transaction #(parameter N=8);
+  rand bit en;
+  rand bit up_dn;
+  bit [N-1:0] counter;
+
+  constraint valid_input {
+    en dist {1:=70, 0:=30};
+  }
+
+  function void display(string tag);
+    $display("[%s] en:%b | up_dn:%b | count:%0d", tag, en, up_dn, counter);
+  endfunction
+endclass
+
+`endif

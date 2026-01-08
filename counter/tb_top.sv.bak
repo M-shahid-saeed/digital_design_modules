@@ -1,0 +1,24 @@
+`include "counter_environment.sv"
+module tb_top;
+bit clk=0;
+
+always #5 clk = ~clk;
+
+
+counter_intf vif(clk);
+counter_environment env;
+counter dut(.clk(vif.clk),
+            .en(vif.en),
+            .up_dn(vif.up_dn),
+            .counter(vif.counter),
+            .rst(vif.rst));
+initial begin
+env=new(vif);
+env.run();
+wait(env.gen_done.triggered);
+#50
+$display("===test finished===");
+$display("===shahid king===");
+$finish;
+end
+endmodule

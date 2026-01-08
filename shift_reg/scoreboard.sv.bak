@@ -1,0 +1,34 @@
+`include "transaction.sv"
+class scoreboard;
+mailbox mon2scb;
+transaction tr;
+
+bit [7:0] expected=0;
+function new(mailbox mon2scb);
+this.mon2scb=mon2scb;
+endfunction
+
+task run();
+forever begin
+mon2scb.get(tr);
+if (tr.q === expected) begin
+        $display("[SCB] PASS! RTL_q: %b | Exp_q: %b", tr.q, expected);
+      end else begin
+        $error("[SCB] FAIL! RTL_q: %b | Exp_q: %b", tr.q, expected);
+      end
+
+     
+if (!tr.rst_n) begin
+        expected = 0;
+      end
+      else if(tr.shift_en)
+ if(tr.dir)begin
+ expected={expected[6:0],tr.din};
+end
+ else                
+          expected = {tr.din, expected[7:1]};
+      end
+      
+    end
+  endtask
+endclass

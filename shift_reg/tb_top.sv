@@ -1,0 +1,33 @@
+`include "environment.sv"
+module tb_top;
+ 
+  bit clk;
+  always #5 clk = ~clk;
+  
+ 
+  shiftreg_intf #(8) vif(clk);
+  
+ 
+  shift_reg #(8) dut (
+    .clk(vif.clk),
+    .rst_n(vif.rst_n),
+    .din(vif.din),
+    .shift_en(vif.shift_en),
+    .dir(vif.dir),
+    .q(vif.q)
+  );
+   
+ 
+  environment env;
+  
+  initial begin
+    env = new(vif);
+    env.run();
+  end
+  
+  // Waves generate karne ke liye (Optional for Questa)
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+  end
+endmodule

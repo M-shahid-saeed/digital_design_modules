@@ -1,0 +1,79 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dE:/tasks/TASK NO 2/simulation/questa
+T_opt
+!s110 1766671186
+V<iKDJiLOfCVKOYeSlgDD[0
+04 8 4 work reg32_tb fast 0
+=1-7470fd1caea3-694d4350-220-1374
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vreg32
+2E:/tasks/TASK NO 2/reg32.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1766671182
+!i10b 1
+!s100 1jSof?gWa7=0NhjNjja=Y1
+IYR1HCJgeol4NL=Wc41@cQ0
+S1
+R1
+w1766574348
+8E:/tasks/TASK NO 2/reg32.sv
+FE:/tasks/TASK NO 2/reg32.sv
+!i122 0
+L0 1 13
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1766671181.000000
+!s107 E:/tasks/TASK NO 2/reg32.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tasks/TASK NO 2|E:/tasks/TASK NO 2/reg32.sv|
+!i113 0
+Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -sv -work work {+incdir+E:/tasks/TASK NO 2} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vreg32_tb
+2E:/tasks/TASK NO 2/reg32_tb.sv
+R3
+R4
+!i10b 1
+!s100 diI4?^LeUB:7k3CWdRX=C1
+I_mH>8KcnFN[Sdg8XCdA8<3
+S1
+R1
+w1766670910
+8E:/tasks/TASK NO 2/reg32_tb.sv
+FE:/tasks/TASK NO 2/reg32_tb.sv
+!i122 1
+L0 1 66
+R5
+R6
+r1
+!s85 0
+31
+!s108 1766671182.000000
+!s107 E:/tasks/TASK NO 2/reg32_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/tasks/TASK NO 2|E:/tasks/TASK NO 2/reg32_tb.sv|
+!i113 0
+R7
+R8
+R2

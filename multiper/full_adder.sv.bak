@@ -1,0 +1,14 @@
+module full_adder(
+input logic a,
+input logic b,
+input logic cin,
+output logic s,
+output logic cout);
+// Sum logic: XOR of all inputs
+    assign s  = a ^ b ^ cin;
+    
+    // Carry out logic
+    assign cout = (a & b) | (cin & (a ^ b));
+
+endmodule
+

@@ -1,0 +1,34 @@
+`include "environment.sv"
+module tb_top;
+ 
+  bit clk;
+  always #5 clk = ~clk;
+  
+ 
+  multiplier_intf #(8) vif(clk);
+  
+ 
+  top_multiplier #(8) dut (
+    .clk(vif.clk),
+    .Reset(vif.Reset),
+    .Data_in_A(vif.Data_in_A),
+    .Data_in_B(vif.Data_in_B),
+    .EA(vif.EA),
+	 .EB(vif.EB),
+    .P_out(vif.P_out)
+  );
+   
+ 
+  environment env;
+  
+  initial begin
+    env = new(vif);
+    env.run();
+  end
+  
+  // Waves generate karne ke liye (Optional for Questa)
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+  end
+endmodule

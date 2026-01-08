@@ -1,0 +1,53 @@
+# Shahid King: Ultra Stable Script
+set WIDTH 16
+if { [info exists 1] } { set WIDTH $1 }
+
+# Library fresh banayein
+if {[file exists work]} { vdel -lib work -all }
+vlib work
+
+# Compile
+# Shahid King: Ultra Stable Script
+set WIDTH 16
+if { [info exists 1] } { set WIDTH $1 }
+
+# Library fresh banayein
+if {[file exists work]} { vdel -lib work -all }
+vlib work
+
+# Compile
+vlog -sv counter.sv
+vlog -sv multiplier_intf.sv
+vlog -sv transaction.sv
+vlog -sv generator.sv
+vlog -sv counter_driver.sv
+vlog -sv counter_monitor.sv
+vlog -sv counter_scoreboard
+vlog -sv counter_environment
+vlog -sv tb_top.sv
+
+# VSIM with safety
+# -voptargs="+acc" zaroori hai waves dekhne ke liye
+vsim -voptargs="+acc" -GN=$WIDTH work.tb_top
+
+# Waves add karein
+add wave -r /*
+
+# SIRF 1000ns chalayein taake PC hang na ho
+run 1000ns
+
+# Finish
+echo "Simulation stopped safely at 1000ns"
+
+# VSIM with safety
+# -voptargs="+acc" zaroori hai waves dekhne ke liye
+vsim -voptargs="+acc" -gN=$WIDTH work.tb_top
+
+# Waves add karein
+add wave -r /*
+
+# SIRF 1000ns chalayein taake PC hang na ho
+run 1000ns
+
+# Finish
+echo "Simulation stopped safely at 1000ns"

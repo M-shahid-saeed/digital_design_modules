@@ -1,0 +1,318 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s12c _opt1
+R1
+!s12c _opt
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dE:/tasks/TASK NO 2/shift_reg
+T_opt2
+!s11d NO 2/shift_reg/work 1 NO 1 2/shift_reg/work 
+!s11d NO 2/shift_reg/work 1 shiftreg_intf 1 E:/tasks/TASK 
+!s11d tb_top_sv_unit E:/tasks/TASK 0 
+!s110 1767608283
+VJda89Z^WViE0Cd3Ii=RBN3
+04 6 4 work tb_top fast 0
+=1-7470fd1caea3-695b8fda-5-1374
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U3 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt2
+OL;O;2024.3;79
+Xdriver_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/driver.sv
+Z4 !s115 shiftreg_intf
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1767608258
+VADjiF]zli33Q_;4NO=IO73
+r1
+!s85 0
+!i10b 1
+!s100 eS36XJ^^?jlP]96P7GNK]1
+IADjiF]zli33Q_;4NO=IO73
+!i103 1
+S1
+R2
+w1766852604
+8E:/tasks/TASK NO 2/shift_reg/driver.sv
+FE:/tasks/TASK NO 2/shift_reg/driver.sv
+Z7 Ftransaction.sv
+!i122 81
+Z8 L0 4 0
+Z9 OL;L;2024.3;79
+31
+!s108 1767608257.000000
+!s107 transaction.sv|E:/tasks/TASK NO 2/shift_reg/driver.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/driver.sv|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Xenvironment_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/environment.sv
+R4
+R5
+R6
+V[XJb7N=Pm]T:DzOl?2C:_0
+r1
+!s85 0
+!i10b 1
+!s100 XiV30>ZZnReQJ:Z<J>]T_0
+I[XJb7N=Pm]T:DzOl?2C:_0
+!i103 1
+S1
+R2
+Z11 w1767608242
+8E:/tasks/TASK NO 2/shift_reg/environment.sv
+FE:/tasks/TASK NO 2/shift_reg/environment.sv
+Z12 Fgenerator.sv
+R7
+Z13 Fdriver.sv
+Z14 Fmonitor.sv
+Z15 Fscoreboard.sv
+!i122 82
+R8
+R9
+31
+Z16 !s108 1767608258.000000
+!s107 scoreboard.sv|monitor.sv|driver.sv|transaction.sv|generator.sv|E:/tasks/TASK NO 2/shift_reg/environment.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/environment.sv|
+!i113 0
+R10
+R3
+Xgenerator_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/generator.sv
+R5
+R6
+VOLP48>j7<j7d<;aaHzh=Y2
+r1
+!s85 0
+!i10b 1
+!s100 mkz0iVEd8S3a::1O>ZWP[1
+IOLP48>j7<j7d<;aaHzh=Y2
+!i103 1
+S1
+R2
+R11
+8E:/tasks/TASK NO 2/shift_reg/generator.sv
+FE:/tasks/TASK NO 2/shift_reg/generator.sv
+R7
+!i122 83
+R8
+R9
+31
+R16
+!s107 transaction.sv|E:/tasks/TASK NO 2/shift_reg/generator.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/generator.sv|
+!i113 0
+R10
+R3
+Xmonitor_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/monitor.sv
+R4
+R5
+Z17 !s110 1767608259
+VW:;__CJeJBdl]_nMBokmK3
+r1
+!s85 0
+!i10b 1
+!s100 aijBS=a9`<_?>3hd;:_:@1
+IW:;__CJeJBdl]_nMBokmK3
+!i103 1
+S1
+R2
+Z18 w1766850714
+8E:/tasks/TASK NO 2/shift_reg/monitor.sv
+FE:/tasks/TASK NO 2/shift_reg/monitor.sv
+R7
+!i122 84
+R8
+R9
+31
+Z19 !s108 1767608259.000000
+!s107 transaction.sv|E:/tasks/TASK NO 2/shift_reg/monitor.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/monitor.sv|
+!i113 0
+R10
+R3
+Xscoreboard_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/scoreboard.sv
+R5
+R17
+V87M>`eYZa`;<ABPQfDj6N1
+r1
+!s85 0
+!i10b 1
+!s100 `N13j7Z=VLN<JmD`8odAd2
+I87M>`eYZa`;<ABPQfDj6N1
+!i103 1
+S1
+R2
+R18
+8E:/tasks/TASK NO 2/shift_reg/scoreboard.sv
+FE:/tasks/TASK NO 2/shift_reg/scoreboard.sv
+R7
+!i122 85
+R8
+R9
+31
+R19
+!s107 transaction.sv|E:/tasks/TASK NO 2/shift_reg/scoreboard.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/scoreboard.sv|
+!i113 0
+R10
+R3
+vshift_reg
+2E:/tasks/TASK NO 2/shift_reg/shift_reg.sv
+R5
+R17
+!i10b 1
+!s100 be^k5[@DGShHS[?iG=N0;0
+IXY=RbE4ERfiogeN];UI6T3
+S1
+R2
+w1766850523
+8E:/tasks/TASK NO 2/shift_reg/shift_reg.sv
+FE:/tasks/TASK NO 2/shift_reg/shift_reg.sv
+!i122 86
+L0 1 24
+Z20 VDg1SIo80bB@j0V0VzS_@n1
+R9
+r1
+!s85 0
+31
+R19
+!s107 E:/tasks/TASK NO 2/shift_reg/shift_reg.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/shift_reg.sv|
+!i113 0
+R10
+R3
+Yshiftreg_intf
+2E:/tasks/TASK NO 2/shift_reg/shiftreg_intf.sv
+R5
+Z21 !s110 1767608260
+!i10b 1
+!s100 K82zXBhf54HCNX@^ND5WE0
+IgBmOk`U@DH=hZAQZnB;Pc0
+S1
+R2
+w1766844693
+8E:/tasks/TASK NO 2/shift_reg/shiftreg_intf.sv
+FE:/tasks/TASK NO 2/shift_reg/shiftreg_intf.sv
+!i122 87
+L0 1 0
+R20
+R9
+r1
+!s85 0
+31
+Z22 !s108 1767608260.000000
+!s107 E:/tasks/TASK NO 2/shift_reg/shiftreg_intf.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/shiftreg_intf.sv|
+!i113 0
+R10
+R3
+vtb_top
+Z23 2E:/tasks/TASK NO 2/shift_reg/tb_top.sv
+R5
+DXx4 work 14 tb_top_sv_unit 0 22 =@:hAHmh=]f]9XVAka1TV1
+R21
+R20
+r1
+!s85 0
+!i10b 1
+!s100 B];RITinT4:nzU<]@RPF81
+IbSiIzoUb=^XLnj@61=ob]2
+!s105 tb_top_sv_unit
+S1
+R2
+w1766850504
+Z24 8E:/tasks/TASK NO 2/shift_reg/tb_top.sv
+Z25 FE:/tasks/TASK NO 2/shift_reg/tb_top.sv
+!i122 88
+L0 2 32
+R9
+31
+R22
+Z26 !s107 scoreboard.sv|monitor.sv|driver.sv|transaction.sv|generator.sv|environment.sv|E:/tasks/TASK NO 2/shift_reg/tb_top.sv|
+Z27 !s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/tb_top.sv|
+!i113 0
+R10
+R3
+Xtb_top_sv_unit
+R23
+R4
+R5
+R21
+V=@:hAHmh=]f]9XVAka1TV1
+r1
+!s85 0
+!i10b 1
+!s100 7i`8GaJ]AKEYhDETeoX3l3
+I=@:hAHmh=]f]9XVAka1TV1
+!i103 1
+S1
+R2
+R11
+R24
+R25
+Fenvironment.sv
+R12
+R7
+R13
+R14
+R15
+!i122 88
+R8
+R9
+31
+R22
+R26
+R27
+!i113 0
+R10
+R3
+Xtransaction_sv_unit
+2E:/tasks/TASK NO 2/shift_reg/transaction.sv
+R5
+!s110 1767608261
+V9?:zA]2;kcjXba<Hj:e762
+r1
+!s85 0
+!i10b 1
+!s100 jmihJjXRNEG0YTc@97zQQ1
+I9?:zA]2;kcjXba<Hj:e762
+!i103 1
+S1
+R2
+R18
+8E:/tasks/TASK NO 2/shift_reg/transaction.sv
+FE:/tasks/TASK NO 2/shift_reg/transaction.sv
+!i122 89
+R8
+R9
+31
+R22
+!s107 E:/tasks/TASK NO 2/shift_reg/transaction.sv|
+!s90 -reportprogress|300|-work|work|E:/tasks/TASK NO 2/shift_reg/transaction.sv|
+!i113 0
+R10
+R3

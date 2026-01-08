@@ -1,0 +1,49 @@
+module adder_tree_multiplier #(parameter N = 8) (
+    input  logic             clk,
+    input  logic             Reset,
+    input  logic [N-1:0]     Data_in_A,
+    input  logic [N-1:0]     Data_in_B,
+    input  logic             EA, EB,
+    output logic [(2*N)-1:0] P_out
+);
+
+    logic [N-1:0] reg_A, reg_B;
+  
+    logic [(2*N)-1:0] pp[N];    
+    always_ff @(posedge clk or posedge Reset) begin
+        if (Reset) begin
+            reg_A <= 0;
+            reg_B <= 0;
+        end else begin
+            if (EA) reg_A <= Data_in_A;
+            if (EB) reg_B <= Data_in_B;
+        end
+    end
+
+  
+    always_comb begin
+        for (int i = 0; i < N; i++) begin
+      
+            pp[i] = (reg_B[i]) ? ( ( (2*N)'(reg_A) ) << i) : 0;
+        end
+    end
+
+   
+    logic [(2*N)-1:0] tree_logic;
+    
+    always_comb begin
+        tree_logic = 0;
+        for (int j = 0; j < N; j++) begin
+            tree_logic = tree_logic + pp[j];
+        end
+    end
+
+  
+    always_ff @(posedge clk or posedge Reset) begin
+        if (Reset)
+            P_out <= 0;
+        else
+            P_out <= tree_logic;
+    end
+
+endmodule

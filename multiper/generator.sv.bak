@@ -1,0 +1,30 @@
+`include "transaction.sv"
+class generator;
+  transaction tr;
+  mailbox gen2driv;
+  event done;
+
+  function new(mailbox gen2driv, event done);
+    this.gen2driv = gen2driv;
+    this.done = done;
+  endfunction
+
+  task run();
+    for(int i=0; i<255; i++) begin
+      tr = new();
+      
+      // $urandom_range use karke values assign ki
+      tr.Data_in_A = $urandom_range(0, 255); 
+      tr.Data_in_B = $urandom_range(0, 255); 
+      
+      // Note: EA aur EB transaction class mein pehle se 1 hain
+      
+      gen2driv.put(tr);
+      $display("[GENERATOR] Packet %0d sent: A=%d, B=%d, EA=%b, EB=%b", 
+                i, tr.Data_in_A, tr.Data_in_B, tr.EA, tr.EB);
+    end
+    
+    ->done;
+    $display("sab bhej dia shahid king");
+  endtask 
+endclass

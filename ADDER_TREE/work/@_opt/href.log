@@ -1,0 +1,12 @@
+BEGIN 3:multiplier_intf:fast__2:work
+    Reset :  1:tb_top:fast:work
+    EB :  1:tb_top:fast:work
+    Data_in_B :  1:tb_top:fast:work
+    clk :  1:tb_top:fast:work
+    Data_in_A :  1:tb_top:fast:work
+    P_out :  1:tb_top:fast:work
+    EA :  1:tb_top:fast:work
+END 
+BEGIN 1:tb_top:fast:work
+    env :  1:tb_top:fast:work
+END 

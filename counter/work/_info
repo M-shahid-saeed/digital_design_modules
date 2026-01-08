@@ -1,0 +1,141 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dE:/tasks/TASK NO 2/counter
+T_opt
+!s11d NO 2/counter/work 1 NO 1 2/counter/work 
+!s11d NO 2/counter/work 1 counter_intf 1 E:/tasks/TASK 
+!s11d tb_top_sv_unit E:/tasks/TASK 0 
+!s110 1767001239
+VBNc=@fa`aX@AFZb>TE[PV1
+04 6 4 work tb_top fast 0
+=1-7470fd1caea3-69524c97-68-d04
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U3 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work -G N=N=8 +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vcounter
+2counter.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1767001237
+!i10b 1
+!s100 NTo[mj]@^3Mm:93YOkYz>1
+IX;ai74?VAbYK8SWk89ER43
+S1
+R1
+w1766779548
+8counter.sv
+Fcounter.sv
+!i122 0
+L0 1 15
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z7 !s108 1767001237.000000
+!s107 counter.sv|
+!s90 -reportprogress|300|-sv|counter.sv|
+!i113 0
+Z8 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Ycounter_intf
+2counter_intf.sv
+R3
+R4
+!i10b 1
+!s100 eJBb^RaDgMi^zLM9Ge7kM1
+Ib@GLamTd[i@aI5^?QFCkN1
+S1
+R1
+w1766993292
+8counter_intf.sv
+Fcounter_intf.sv
+!i122 1
+L0 1 0
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 counter_intf.sv|
+!s90 -reportprogress|300|-sv|counter_intf.sv|
+!i113 0
+R8
+R2
+vtb_top
+Z9 2tb_top.sv
+R3
+DXx4 work 14 tb_top_sv_unit 0 22 NBJggYc2jQg4icfM_]?de0
+Z10 !s110 1767001238
+R5
+r1
+!s85 0
+!i10b 1
+!s100 L`@EG6]R`Y1CLOCW6HNo43
+I<8L5<gbB5a^WK0E;4Tf][2
+!s105 tb_top_sv_unit
+S1
+R1
+Z11 w1766995403
+Z12 8tb_top.sv
+Z13 Ftb_top.sv
+!i122 2
+L0 3 36
+R6
+31
+Z14 !s108 1767001238.000000
+Z15 !s107 counter_scoreboard.sv|counter_monitor.sv|counter_driver.sv|generator.sv|transaction.sv|counter_environment.sv|tb_top.sv|
+Z16 !s90 -reportprogress|300|-sv|tb_top.sv|
+!i113 0
+R8
+R2
+Xtb_top_sv_unit
+!i114 1
+R9
+!s115 counter_intf
+R3
+R10
+VNBJggYc2jQg4icfM_]?de0
+r1
+!s85 0
+!i10b 1
+!s100 YCSBA<Z^PFAOID5ck3em31
+INBJggYc2jQg4icfM_]?de0
+!i103 1
+S1
+R1
+R11
+R12
+R13
+Fcounter_environment.sv
+Ftransaction.sv
+Fgenerator.sv
+Fcounter_driver.sv
+Fcounter_monitor.sv
+Fcounter_scoreboard.sv
+!i122 2
+L0 4 0
+R6
+31
+R14
+R15
+R16
+!i113 0
+R8
+R2

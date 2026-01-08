@@ -1,0 +1,23 @@
+`include "transaction.sv"
+class generator; 
+transaction tr;
+mailbox mbx;
+event done;
+
+function new(mailbox mbx,event done);
+this.mbx=mbx;
+this.done=done;
+end function
+
+task run();
+
+
+for(int i=0;i<257;i++) begin
+tr=new();
+if(!tr.randomize())  $fatal("ramdime fauled");
+mbx.put(tr);
+$display("packets send :%d",i);
+end
+->done
+endtask 
+end class

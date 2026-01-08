@@ -1,0 +1,24 @@
+module shift_reg#(parameter N=8) (
+input logic clk,
+input logic din,
+input logic shift_en,
+input logic rst_n,
+input logic dir,
+output logic [N-1:0]q);
+
+
+
+always_ff@(posedge clk or negedge rst_n)begin
+if(!rst_n)begin
+q<=0;
+end
+else if( shift_en)begin
+if(dir==1'b1)begin
+q<={q[N-2:0],din};
+end
+else begin
+q<={din,q[N-1:1]};
+end
+end
+end
+endmodule 

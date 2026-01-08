@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "P_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "P_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EB",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EA",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Data_in_B[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

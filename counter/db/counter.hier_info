@@ -1,0 +1,43 @@
+|counter
+rst => counter[0]~reg0.ACLR
+rst => counter[1]~reg0.ACLR
+rst => counter[2]~reg0.ACLR
+rst => counter[3]~reg0.ACLR
+rst => counter[4]~reg0.ACLR
+rst => counter[5]~reg0.ACLR
+rst => counter[6]~reg0.ACLR
+rst => counter[7]~reg0.ACLR
+clk => counter[0]~reg0.CLK
+clk => counter[1]~reg0.CLK
+clk => counter[2]~reg0.CLK
+clk => counter[3]~reg0.CLK
+clk => counter[4]~reg0.CLK
+clk => counter[5]~reg0.CLK
+clk => counter[6]~reg0.CLK
+clk => counter[7]~reg0.CLK
+en => counter[0]~reg0.ENA
+en => counter[7]~reg0.ENA
+en => counter[6]~reg0.ENA
+en => counter[5]~reg0.ENA
+en => counter[4]~reg0.ENA
+en => counter[3]~reg0.ENA
+en => counter[2]~reg0.ENA
+en => counter[1]~reg0.ENA
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+up_dn => counter.OUTPUTSELECT
+counter[0] <= counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= counter[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[3] <= counter[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[4] <= counter[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[5] <= counter[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[6] <= counter[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter[7] <= counter[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

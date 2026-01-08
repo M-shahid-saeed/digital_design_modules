@@ -1,0 +1,87 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 win64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do REG32_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/24.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/tasks/TASK\ NO\ 2 {E:/tasks/TASK NO 2/reg32.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 18:59:41 on Dec 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tasks/TASK NO 2" E:/tasks/TASK NO 2/reg32.sv 
+# -- Compiling module reg32
+# 
+# Top level modules:
+# 	reg32
+# End time: 18:59:42 on Dec 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/tasks/TASK\ NO\ 2 {E:/tasks/TASK NO 2/reg32_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+# Start time: 18:59:42 on Dec 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/tasks/TASK NO 2" E:/tasks/TASK NO 2/reg32_tb.sv 
+# -- Compiling module reg32_tb
+# 
+# Top level modules:
+# 	reg32_tb
+# End time: 18:59:42 on Dec 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  reg32_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" reg32_tb 
+# Start time: 18:59:43 on Dec 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.reg32_tb(fast)
+# Loading work.reg32(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# -----starting test------
+# ** Warning: (vsim-PLI-8496) $fatal : Argument number 1 is invalid. Expecting 0, 1, or 2. Using default value of 1
+#    Time: 15 ps  Iteration: 2  Process: /reg32_tb/assert__b_res32 File: E:/tasks/TASK NO 2/reg32_tb.sv Line: 39
+# ** Fatal: your registerfilr is corrupted
+#    Time: 15 ps Started: 5 ps  Scope: reg32_tb File: E:/tasks/TASK NO 2/reg32_tb.sv Line: 39
+# ** Note: $finish    : E:/tasks/TASK NO 2/reg32_tb.sv(39)
+#    Time: 15 ps  Iteration: 2  Instance: /reg32_tb
+# 1
+# Break in Module reg32_tb at E:/tasks/TASK NO 2/reg32_tb.sv line 39
+run
+# -----end  test------
+# ** Warning: (vsim-PLI-8496) $fatal : Argument number 1 is invalid. Expecting 0, 1, or 2. Using default value of 1
+#    Time: 55 ps  Iteration: 1  Process: /reg32_tb/assert__a_res32 File: E:/tasks/TASK NO 2/reg32_tb.sv Line: 32
+# ** Fatal: your registerfilr is corrupted
+#    Time: 55 ps Started: 45 ps  Scope: reg32_tb File: E:/tasks/TASK NO 2/reg32_tb.sv Line: 32
+# ** Note: $finish    : E:/tasks/TASK NO 2/reg32_tb.sv(32)
+#    Time: 55 ps  Iteration: 1  Instance: /reg32_tb
+# 1
+# Break in Module reg32_tb at E:/tasks/TASK NO 2/reg32_tb.sv line 32
+run
+run
+# End time: 19:10:46 on Dec 25,2025, Elapsed time: 0:11:03
+# Errors: 2, Warnings: 3

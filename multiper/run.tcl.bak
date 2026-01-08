@@ -1,0 +1,50 @@
+# ---------------------------------------------------------
+# SHAHID KING'S MULTIPLIER AUTOMATION SCRIPT
+# Usage in Questasim: do run.tcl <width>
+# ---------------------------------------------------------
+
+# 1. Check if user provided an argument (e.g., "do run.tcl 16")
+if { [info exists 1] } {
+    set WIDTH $1
+    puts "----------------------------------------------------"
+    puts "Running Simulation with N = $WIDTH"
+    puts "----------------------------------------------------"
+} else {
+    set WIDTH 8
+    puts "----------------------------------------------------"
+    puts "No width specified. Defaulting to N = 8"
+    puts "Usage: do run.tcl <width>"
+    puts "----------------------------------------------------"
+}
+
+# 2. Clean old work library and Create new
+if {[file exists work]} {
+    vdel -lib work -all
+}
+vlib work
+
+# 3. Compile RTL Files (Paths ko apne mutabiq adjust karein)
+# Hum assume kar rahe hain ke files ../rtl/ folder mein hain
+vlog -sv ../rtl/full_adder.sv
+vlog -sv ../rtl/cubic.sv
+vlog -sv ../rtl/multiplier_core.sv
+vlog -sv ../rtl/top_multiplier.sv
+
+# 4. Compile Testbench Files
+# Hum assume kar rahe hain ke files ../tb/ folder mein hain
+vlog -sv ../tb/multiplier_intf.sv
+vlog -sv ../tb/tb_top.sv
+
+# 5. Load Simulation with Parameter Override
+# -GN=$WIDTH hi wo magic hai jo tb_top ke parameter N ko change karta hai
+vsim -voptargs=+acc -GN=$WIDTH work.tb_top
+
+# 6. Setup Waves
+# tb_top ke andar vif (interface) ke saare signals add karein
+add wave -position insertpoint sim:/tb_top/vif/*
+
+# 7. Run Simulation
+run -all
+
+# 8. Zoom Full for better view
+wave zoom full

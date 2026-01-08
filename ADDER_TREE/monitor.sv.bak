@@ -1,0 +1,35 @@
+`include "transaction.sv"
+
+// 1. Parameter N add kiya (Default 8)
+class monitor #(parameter N = 8);
+  
+  // 2. Interface ko bataya ke wo N-bit ka hai
+  virtual multiplier_intf #(N) vif;
+  mailbox mon2scb;
+  
+  // 3. Transaction ko bhi N-bit ke mutabiq declare kiya
+  transaction #(N) tr;
+
+  function new(virtual multiplier_intf #(N) vif, mailbox mon2scb);
+    this.vif = vif;
+    this.mon2scb = mon2scb;
+  endfunction
+
+  task run();
+    forever begin
+      @(posedge vif.clk); 
+      #1; // Thora wait taake signals settle ho jayein
+      
+      tr = new();
+      tr.Data_in_A = vif.Data_in_A;
+      tr.Data_in_B = vif.Data_in_B;
+      tr.EA        = vif.EA;
+      tr.EB        = vif.EB;
+      tr.Reset     = vif.Reset;
+      tr.P_out     = vif.P_out; // Dynamic width (2*N) auto-handle ho jayegi
+      
+      mon2scb.put(tr);
+      tr.display("MONITOR");
+    end
+  endtask
+endclass

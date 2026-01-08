@@ -1,0 +1,24 @@
+`ifndef TRANSACTION_SV
+`define TRANSACTION_SV
+
+class transaction #(parameter N=8);
+rand bit din;
+rand bit shift_en;
+rand bit dir;
+bit rst_n;
+bit[N-1:0]q;
+constraint valid_data{
+shift_en dist{ 1:=70 ,0:=30};
+dir dist{ 1:=55,0:=45};
+}
+
+function void display(string tag);
+    $display("[%s] Time:%0t | din:%b | shift_en:%b | dir:%b | q:%b", 
+              tag, $time, din, shift_en, dir, q);
+  endfunction
+
+
+endclass
+
+
+`endif  

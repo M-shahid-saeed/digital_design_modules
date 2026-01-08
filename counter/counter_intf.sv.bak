@@ -1,0 +1,8 @@
+interface counter_intf(input logic clk);
+logic rst;
+ logic clk;
+ logic en;
+ logic up_dn;
+ logic [N-1:0] counter;
+ end interface
+ 

@@ -1,0 +1,40 @@
+`include "environment.sv"
+
+module tb_top;
+    // 1. TCL script is parameter N ko override karegi (e.g., -GN=16)
+    parameter N = 8; 
+
+    bit clk;
+    always #5 clk = ~clk;
+
+    // 2. Interface ko parameter N pass kiya
+    multiplier_intf #(N) vif(clk);
+
+    // 3. DUT ko parameter N pass kiya
+    // Ab ye dynamic hai, 8, 16, ya 32 bits TCL se handle honge
+    top_multiplier #(N) dut (
+        .clk(vif.clk),
+        .Reset(vif.Reset),
+        .Data_in_A(vif.Data_in_A),
+        .Data_in_B(vif.Data_in_B),
+        .EA(vif.EA),
+        .EB(vif.EB),
+        .P_out(vif.P_out)
+    );
+
+    // 4. Environment ko #(N) ke saath declare kiya
+    environment #(N) env;
+
+    initial begin
+        // Environment object create karte waqt Interface pass kiya
+        env = new(vif);
+        env.run();
+    end
+
+    // Waves ke liye logic
+    initial begin
+        $dumpfile("dump.vcd");
+        // tb_top ke saare levels dump karne ke liye 0 use karein
+        $dumpvars(0, tb_top);
+    end
+endmodule

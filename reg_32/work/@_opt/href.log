@@ -1,0 +1,14 @@
+BEGIN 3:counter_intf:fast__2:work
+    rst :  1:tb_top:fast:work
+    en :  1:tb_top:fast:work
+    counter :  1:tb_top:fast:work
+    clk :  1:tb_top:fast:work
+    up_dn :  1:tb_top:fast:work
+END 
+BEGIN 3:counter_intf:fast__1:work
+    clk :  1:tb_top_sv_unit:fast:work
+    counter :  1:tb_top_sv_unit:fast:work
+    rst :  1:tb_top_sv_unit:fast:work
+    en :  1:tb_top_sv_unit:fast:work
+    up_dn :  1:tb_top_sv_unit:fast:work
+END 
